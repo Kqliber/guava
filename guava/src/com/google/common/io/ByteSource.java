@@ -426,6 +426,7 @@ public abstract class ByteSource {
     return concat(ImmutableList.copyOf(sources));
   }
 
+
   /**
    * Returns a view of the given byte array as a {@link ByteSource}. To view only a specific range
    * in the array, use {@code ByteSource.wrap(b).slice(offset, length)}.
@@ -594,7 +595,7 @@ public abstract class ByteSource {
     }
 
     @Override
-    public InputStream openBufferedStream() throws IOException {
+    public InputStream openBufferedStream() {
       return openStream();
     }
 
